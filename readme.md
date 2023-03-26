@@ -30,7 +30,7 @@ If the head atom is greater than 3, will recursively apply the '/' operator usin
 
 We define the Nock function as a function that takes an input noun (described as a cell of [subject formula]), and returns an output noun or crashes. The Nock function is defined below.
 
-A valid Nock formula is always a cell. If the head of the formula is a cell, Nock treats both head and tail as formulas, evaluates each against the subject, and produces the cell of their products. If the head of the formula is an atom, it's an instruction from 0 to 11.
+A valid Nock formula is always a cell. If the head of the formula is a cell, Nock treats both head and tail as formulas, evaluates each against the subject, and produces the cell of their products. If the head of the formula is an atom, it's an instruction from 0 to 11. Invalid Nock instructions result in a crash.
 
 Nock(a) evaluates to *a.
 In the following examples, a is a subject and the following cell is the formula:
