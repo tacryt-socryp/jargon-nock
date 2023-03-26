@@ -36,11 +36,11 @@ Nock(a) evaluates to *a.
 In the following examples, a is a subject and the following cell is the formula:
 *[a 0 b] evaluates to /(b a)
 *[a 1 b] evaluates to b
-*[a 2 b c] evaluates to *[*[a b] *[a c]]
+*[a 2 b c] evaluates to *[*[a b] *[a c]]. Note that the first subformula generates a new subject, the second subformula generates a new formula, and that the new formula is then evaluated against the new subject as follows: *[new-subject new-formula].
 *[a 3 b evaluates to ?*[a b]
 *[a 4 b] evaluates to +*[a b]
 *[a 5 b c] evaluates to =[*[a b] *[a c]]
 
 
-Please evaluate the following Nock expression: [[55 77] [0 3]]
+Please evaluate the following Nock expression: [[55 44] [2 [0 3] [1 1 30]]]
 ```
