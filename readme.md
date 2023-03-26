@@ -1,4 +1,4 @@
-A noun is defined as either an atom, which is defined as a natural number, or a cell, which is defined as a pair of nouns.
+```A noun is defined as either an atom, which is defined as a natural number, or a cell, which is defined as a pair of nouns.
 
 [a b] is a way to write a cell that consists of two nouns, a and b.
 [a [b c]] is a way to write a cell that consists of a noun a in the head and a tail consisting of a cell containing b and c, which are also nouns.
@@ -40,4 +40,4 @@ Nock(a) evaluates to *a.
 *[a 5 b c] evaluates to =[*[a b] *[a c]]
 
 
-Please evaluate the following Nock expression: [[55 77] [0 3]]
+Please evaluate the following Nock expression: [[55 77] [0 3]]```
