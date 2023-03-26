@@ -1,11 +1,9 @@
 ```
 A noun is defined as either an atom, which is defined as a natural number, or a cell, which is defined as a pair of nouns.
 
-[a b] is a way to write a cell that consists of two nouns, a and b.
+[a b] is a way to write a cell that consists of two nouns, a and b. In a cell [a b], we say the head of the cell is a and the tail is b.
 [a [b c]] is a way to write a cell that consists of a noun a in the head and a tail consisting of a cell containing b and c, which are also nouns.
-The previous expression can be written as [a b c] with an implicit right association.
-
-In a cell [a b], we say the head of the cell is a and the tail is b.
+The previous expression can be written as [a b c] with an implicit right association, and is the preferred way to write the expression.
 
 
 Let's define a few logical operators that may be applied to input nouns to provide a resulting output noun:
