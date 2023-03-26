@@ -28,9 +28,12 @@ If the head atom is greater than 3, will recursively apply the '/' operator usin
 /((a + a + 1) b) will reduce to /(3 /(a b)) which will then be further evaluated until it reaches one of the base cases I described to you.
 
 
-We define the Nock function as a function that takes an input noun and returns an output noun or crashes. The Nock function is defined below.
+We define the Nock function as a function that takes an input noun (described as a cell of [subject formula]), and returns an output noun or crashes. The Nock function is defined below.
+
+A valid Nock formula is always a cell. If the head of the formula is a cell, Nock treats both head and tail as formulas, evaluates each against the subject, and produces the cell of their products. If the head of the formula is an atom, it's an instruction from 0 to 11.
 
 Nock(a) evaluates to *a.
+In the following examples, a is a subject and the following cell is the formula:
 *[a 0 b] evaluates to /(b a)
 *[a 1 b] evaluates to b
 *[a 2 b c] evaluates to *[*[a b] *[a c]]
