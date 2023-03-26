@@ -1,5 +1,8 @@
-A noun is defined as either an atom, which is defined as a natural number, or a cell, which is defined as a pair of nouns.  [a b] is a way to write a cell that consists of two nouns, a and b.
-[a [b c]] is a way to write a cell that consists of a noun a in the head and a tail consisting of a cell containing b and c, which are also nouns. The previous expression can be written as [a b c] with an implicit right association.
+A noun is defined as either an atom, which is defined as a natural number, or a cell, which is defined as a pair of nouns.
+
+[a b] is a way to write a cell that consists of two nouns, a and b.
+[a [b c]] is a way to write a cell that consists of a noun a in the head and a tail consisting of a cell containing b and c, which are also nouns.
+The previous expression can be written as [a b c] with an implicit right association.
 
 In a cell [a b], we say the head of the cell is a and the tail is b.
 
@@ -27,13 +30,14 @@ If the head atom is greater than 3, will recursively apply the '/' operator usin
 
 
 We define the Nock function as a function that takes an input noun and returns an output noun or crashes. The Nock function is defined below.
-Nock(a) evaluates to *a.
 
+Nock(a) evaluates to *a.
 *[a 0 b] evaluates to /(b a)
 *[a 1 b] evaluates to b
 *[a 2 b c] evaluates to *[*[a b] *[a c]]
 *[a 3 b evaluates to ?*[a b]
 *[a 4 b] evaluates to +*[a b]
 *[a 5 b c] evaluates to =[*[a b] *[a c]]
+
 
 Please evaluate the following Nock expression: [[55 77] [0 3]]
